@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Task } from "../../../../DataModule/Task"
+import { StatsBar } from '../../reusable/stats-bar/stats-bar';
+import { TaskCard } from '../../reusable/task-card/task-card';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [StatsBar, TaskCard],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })

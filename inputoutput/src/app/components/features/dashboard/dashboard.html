@@ -1,1 +1,8 @@
+<app-stats-bar [tasks]="TaskArray"></app-stats-bar>
+@for (task of TaskArray; track task.id) {
+  <app-task-card [task]="task">
+  </app-task-card>
+}
+
+
 <p>dashboard works!</p>
