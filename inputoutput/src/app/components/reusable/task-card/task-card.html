@@ -1,1 +1,12 @@
-<p>task-card works!</p>
+<div class = "card p-3 mb-3" [ngClass] = "{ 'border-danger': task.priority === 'High', 'border-success': task.priority === 'Low'}">
+<h4>{{ task.title }}
+
+@if (task.status === "Completed") {
+  ✅
+  } @else {
+  ⏳
+  }
+  </h4>
+  <button class = "button" (click)="onStatusChange()">Change Status</button>
+  <button class = "button" (click)="onpriorityToggle()">Toggle Priority</button>
+</div>
