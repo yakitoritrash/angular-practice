@@ -1,0 +1,49 @@
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px; // Creates a nice pill shape
+  margin-bottom: 32px;
+  width: fit-content;
+
+  .crumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .separator {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    // Magic trick: Make the very last crumb white and unclickable
+    &:last-child {
+      a {
+        color: #ffffff;
+        pointer-events: none;
+      }
+      .separator {
+        display: none; // Hide the trailing slash
+      }
+    }
+  }
+}

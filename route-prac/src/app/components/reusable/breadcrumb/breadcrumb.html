@@ -1,0 +1,8 @@
+<nav class="breadcrumb-container">
+  @for (crumb of trail$ | async; track crumb.url) {
+    <div class="crumb">
+      <a [routerLink]="crumb.url">{{ crumb.label }}</a>
+      <span class="separator"> / </span>
+    </div>
+  }
+</nav>

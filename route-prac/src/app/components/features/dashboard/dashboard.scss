@@ -1,0 +1,49 @@
+// Aligns the Total Tasks and Add Task button in a clean row
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+// Gives your filter buttons breathing room
+.header-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+// Base styling for your filter buttons
+.apple-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // Override for the main Add Task button so it pops
+  &.add-btn {
+    background: #007AFF;
+    border: none;
+
+    &:hover {
+      background: #0066d6;
+    }
+  }
+}

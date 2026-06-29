@@ -1,0 +1,15 @@
+<div class="glass-card" [ngClass]="{'priority-high': task.priority === 'High', 'priority-low': task.priority === 'Low'}">
+
+<h4>{{ task.title }}
+
+@if (task.status === "Completed") {
+  ✅
+  } @else {
+  ⏳
+  }
+  </h4>
+  <div class = "action-buttons">
+  <button class = "glass-btn" (click)="onStatusChange()">Change Status</button>
+  <button class = "glass-btn" (click)="onpriorityToggle()">Toggle Priority</button>
+  </div>
+</div>

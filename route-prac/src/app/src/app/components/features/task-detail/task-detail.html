@@ -1,0 +1,9 @@
+@if (isLoading) {
+  <p>Loading...</p>
+} @else if (task) {
+  <app-task-card [task]="task"></app-task-card>
+
+  <button class="back-btn" (click)="goBack()">Back to List</button>
+} @else {
+  <p>Task not found.</p>
+}

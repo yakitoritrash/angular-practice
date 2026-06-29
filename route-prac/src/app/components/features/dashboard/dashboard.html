@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+
+  <div class="dashboard-header">
+    <app-stats-bar [tasks]="filteredTasks"></app-stats-bar>
+
+    <div class="header-actions">
+      @if (TaskArray.length < 10) {
+        <button class="apple-btn add-btn" (click)="addTask()">Add Task</button>
+      } @else {
+        <p class="limit-warning">Task Limit reached</p>
+      }
+    </div>
+  </div>
+
+  <!--<input
+    #searchInput
+    id="searchInput"
+    class="search-bar"
+    placeholder="Search your tasks..."
+    (input)="filterTasks(searchInput.value)"
+  >--->
+  <button class = "apple-btn" (click) = "updateFilter('all')">Show All</button>
+  <button class = "apple-btn" (click) = "updateFilter('high')">Show High Priority</button>
+
+  <div class="task-list">
+    @for (task of filteredTasks; track task.id) {
+      <app-task-card
+        [task]="task"
+        (statusChanged)="updateStatus($event)"
+        (priorityToggled)="togglePriority($event)">
+      </app-task-card>
+    }
+  </div>
+
+</div>

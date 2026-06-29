@@ -1,0 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body {
+  /* A highly vibrant, multi-color gradient */
+  background: linear-gradient(-45deg, #FF3B30, #5E5CE6, #32ADE6, #34C759);
+  background-size: 400% 400%;
+  animation: auroraFlow 60s linear infinite;
+
+  min-height: 100vh;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* The CSS Keyframe that smoothly shifts the background colors */
+@keyframes auroraFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
